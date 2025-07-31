@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Wine Quality Prediction</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+
+    <h1 >Wine Quality Predictor</h1>
+    <div class="container">
+        <h4 style="color: rgb(66, 19, 19);">Enter the physicochemical attributes of wine.</h4>
+        <form action="/predict" method="post">
+            <label>Fixed Acidity:</label>
+            <input type="text" name="fixed_acidity">
+
+            <label>Volatile Acidity:</label>
+            <input type="text" name="volatile_acidity">
+
+            <label>Citric Acid:</label>
+            <input type="text" name="citric_acid">
+
+            <label>Residual Sugar:</label>
+            <input type="text" name="residual_sugar">
+
+            <label>Chlorides:</label>
+            <input type="text" name="chlorides">
+
+            <label>Free Sulfur Dioxide:</label>
+            <input type="text" name="free_sulfur_dioxide">
+
+            <label>Total Sulfur Dioxide:</label>
+            <input type="text" name="total_sulfur_dioxide">
+
+            <label>Density:</label>
+            <input type="text" name="density">
+
+            <label>pH:</label>
+            <input type="text" name="pH">
+
+            <label>Sulphates:</label>
+            <input type="text" name="sulphates">
+
+            <label>Alcohol:</label>
+            <input type="text" name="alcohol">
+
+            <input style="background-color: black;" type="submit" value="Predict Quality">
+        </form>
+    </div>
+    {% if prediction_text %}
+    <h3>{{ prediction_text }}</h3>
+    {% endif %}
+
+</body>
+
+</html>
